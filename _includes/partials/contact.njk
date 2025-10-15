@@ -1,0 +1,54 @@
+<div class="container-fluid" id="{{metadata.contact.section}}">
+<div class="row mt-5 ">
+<div class="col-md-10 mx-auto p-3 p-md-5">
+<div class="row">
+<div class="col-md-5 p-3 p-md-5">
+<h2 class="col-md-12 sh-text"><strong><a href="{{metadata.url}}" class="none">
+{{metadata.contact.title}}
+</a></strong></h2>
+<h3>{{metadata.contact.restaurant_name}}</h3>
+<div class="mt-5 mb-3">
+<h4>{{metadata.contact.address.title}}</h4>
+<p><i class="{{metadata.contact.address.icon}} me-2"></i>
+    {{metadata.contact.address.text}}
+</p>
+</div>
+<div class="mt-5">
+<h4>{{metadata.contact.phone.title}}</h4>
+<p><i class="{{metadata.contact.phone.icon}} me-2"></i>
+<a href="{{metadata.contact.phone.url}}">{{metadata.contact.phone.text}}</a>
+</p>
+</div>
+{% if metadata.contact.hours.show %}<div class="mt-5">
+<h4>{{metadata.contact.hours.title}}</h4>
+<div class="col-md-10 border shadow-sm rounded p-3">{% for m in metadata.contact.hours.text %}
+<p class="row">
+<span class="col-md-6"><i class="{{metadata.contact.hours.icon}} me-2"></i> {{m.day}}</span>
+<span class="col-md-6">{{m.info}}</span>
+</p>{% endfor %}</div>
+</div>{% endif %}
+<div class="mt-5">
+<h4>{{metadata.contact.email.title}}</h4>
+<p><i class="{{metadata.contact.email.icon}} me-2"></i>
+<a href="mailto:{{metadata.contact.email.text}}">{{metadata.contact.email.text}}</a>
+</p>
+</div>
+<div class="mt-5">
+<h4>{{metadata.social.title}}</h4>
+<p>{% for s in metadata.social.list %}
+<a href="{{s.url}}" class="me-2 btn btn-ungu mt-1 mb-1"><i class="{{s.icon}} me-3"></i><small>{{s.title}}</small></a>
+{% endfor %}
+</p>
+</div>
+</div>
+<div class="col-md-1"></div>
+<div class="col-md-6 p-3 p-md-5">
+<a href="{{metadata.contact.map_url}}"><img class="img-fluid" src="{{metadata.contact.image}}" 
+alt="{{metadata.title}}"
+width="100%" height="100%"
+/></a>
+</div>
+</div>
+</div>
+</div>
+</div>

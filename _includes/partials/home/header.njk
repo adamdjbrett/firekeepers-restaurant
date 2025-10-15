@@ -1,0 +1,14 @@
+<header class="container-fluid align-items-center justify-content-center">
+    <div class="row">
+        <div class="col-md-10 mx-auto text-center p-5">
+            <h1 class="h-text text-uppercase p-3"><strong>
+			<a href="{{metadata.url}}" class="none">{{header.title}}</a></strong></h1>
+            <h2 class="mb-5">{{header.description}}</h2>
+			</div>
+            <img class="img-fluid col-md-11 mx-auto mb-5 header-home-cover" alt="{{header.title}}" src="{{header.image or metadata.image}}"/>
+			<p class="col-md-10 mx-auto text-center">
+                <a href="{{header.button1.url}}" class="btn btn-ungu btn-lg mt-1 mb-1">{{header.button1.text}}</a>
+                <a href="{{header.button2.url}}" class="btn btn-outline-ungu  mt-1 mb-1 btn-lg ms-3">{{header.button2.text}}</a>
+            </p>
+    </div>
+</header>
