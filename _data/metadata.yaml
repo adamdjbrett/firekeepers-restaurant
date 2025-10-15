@@ -4,7 +4,7 @@ language: en
 locale: en_US
 image: /img/logo.svg
 favicon: /img/logo.svg
-url: http://localhost:8080
+url: http://firekeepers.info
 formspree_id: "https://formspree.io/f/{your_form_id}"
 
 navbar:
@@ -65,7 +65,7 @@ contact:
   email:
     title: "Email"
     icon: "fas fa-envelope"
-    text: "hello@yourdomain.com"
+    text: "hello@firekeepers.info"
   phone:
     title: "Phone"
     icon: "fas fa-mobile-alt"
