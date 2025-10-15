@@ -1,0 +1,17 @@
+<div class="container" id="welcome">
+<div class="row mt-5 mb-5">
+<div class="col-md-8 p-3 p-md-5 ">
+<h2 class="sh-text"><strong><a href="{{metadata.url}}" class="none">{{welcome.title}}</a></strong></h2>
+<h3><strong>{{welcome.description}}</strong></h3>
+{{welcome.text| markdownify |safe}}
+</div>
+<div class="col-md-4 p-3 p-md-5 rounded"
+     style="
+        background-image: url('{{welcome.image}}');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+     ">
+</div>
+</div>
+</div>

@@ -1,0 +1,449 @@
+logo_url: logo.svg
+#local_backend: true
+backend:
+  name: git-gateway
+  repo: adamdjbrett/firekeepers-restaurant
+  branch: main 
+media_folder: 'public/img'
+collections:
+  - name: "home"
+    label: "Home Page"
+    files:
+      - file: "content/index.md"
+        label: "Home Page Content"
+        name: "home"
+        editor:
+          preview: false
+        fields:
+          - {name: "layout", label: "Layout", widget: "hidden", default: "home.njk", required: false}
+          - {name: "title", label: "Title", widget: "string", required: false}
+          - {name: "description", label: "Description", widget: "string", required: false}
+          - {name: "image", label: "Image", widget: "image", required: false}
+          - name: "header"
+            label: "Header Section"
+            widget: "object"
+            required: false
+            fields:
+              - {name: "title", label: "Title", widget: "string", required: false}
+              - {name: "description", label: "Description", widget: "string", required: false}
+              - {name: "image", label: "Image", widget: "image", required: false}
+              - name: "button1"
+                label: "Button 1"
+                widget: "object"
+                required: false
+                fields:
+                  - {name: "text", label: "Text", widget: "string", required: false}
+                  - {name: "url", label: "URL", widget: "string", required: false}
+              - name: "button2"
+                label: "Button 2"
+                widget: "object"
+                required: false
+                fields:
+                  - {name: "text", label: "Text", widget: "string", required: false}
+                  - {name: "url", label: "URL", widget: "string", required: false}
+          - {name: "show_breakfast", label: "Show Breakfast", widget: "boolean", required: false}
+          - {name: "show_menu", label: "Show Menu", widget: "boolean", required: false}
+          - name: "welcome"
+            label: "Welcome Section"
+            widget: "object"
+            required: false
+            fields:
+              - {name: "title", label: "Title", widget: "string", required: false}
+              - {name: "image", label: "Image", widget: "image", required: false}
+              - {name: "description", label: "Description", widget: "string", required: false}
+              - {name: "text", label: "Text", widget: "markdown", required: false}
+          - name: "about"
+            label: "About Section"
+            widget: "object"
+            required: false
+            fields:
+              - {name: "title", label: "Title", widget: "string", required: false}
+              - {name: "section", label: "Section ID", widget: "string", required: false}
+              - {name: "description", label: "Description", widget: "string", required: false}
+              - {name: "image", label: "Image", widget: "image", required: false}
+              - name: "button"
+                label: "Button"
+                widget: "object"
+                required: false
+                fields:
+                  - {name: "text", label: "Text", widget: "string", required: false}
+                  - {name: "url", label: "URL", widget: "string", required: false}
+              - {name: "text", label: "Text", widget: "markdown", required: false}
+  - name: "breakfast"
+    label: "Breakfast Page"
+    files:
+      - file: "content/menu/breakfast.md"
+        label: "Breakfast Page Content"
+        name: "breakfast"
+        editor:
+          preview: false
+        fields:
+          - {name: "layout", label: "Layout", widget: "hidden", default: "breakfast.njk", required: false}
+          - {name: "title", label: "Title", widget: "string", required: false}
+          - {name: "description", label: "Description", widget: "string", required: false}
+          - {name: "image", label: "Image", widget: "image", required: false}
+          - {name: "show_menu", label: "Show Menu", widget: "boolean", required: false}
+          - {name: "permalink", label: "Permalink", widget: "string", required: false}
+          - {name: "body", label: "Content", widget: "markdown", required: false}
+  - name: "breakfast_menu"
+    label: "Breakfast Menu"
+    files:
+      - file: "_data/breakfast.yaml"
+        label: "Breakfast Menu Data"
+        name: "breakfast_data"
+        editor:
+          preview: false
+        fields:
+          - {name: "title", label: "Title", widget: "string", required: false}
+          - {name: "description", label: "Description", widget: "string", required: false}
+          - name: "button"
+            label: "Button"
+            widget: "object"
+            required: false
+            fields:
+              - {name: "text", label: "Text", widget: "string", required: false}
+              - {name: "url", label: "URL", widget: "string", required: false}
+          - name: "menu"
+            label: "Menu Items"
+            widget: "list"
+            required: false
+            fields:
+              - {name: "title", label: "Title", widget: "string", required: false}
+              - {name: "single_price", label: "Enable Single Price", widget: "boolean", default: false, required: false}
+              - {name: "price", label: "Single Price", widget: "string", required: false, if: "single_price"}
+              - {name: "image", label: "Image", widget: "image", required: false}
+              - {name: "description", label: "Description", widget: "markdown", required: false}
+              - {name: "list_active", label: "Enable List", widget: "boolean", default: false, required: false}
+              - name: "list"
+                label: "List Items"
+                widget: "list"
+                required: false
+                if: "list_active"
+                fields:
+                  - {name: "text", label: "Text", widget: "string", required: false}
+                  - {name: "price", label: "Price", widget: "string", required: false}
+                  - name: "variant"
+                    label: "Variants"
+                    widget: "list"
+                    required: false
+                    fields:
+                      - {name: "name", label: "Name", widget: "string", required: false}
+                      - {name: "price", label: "Price", widget: "string", required: false}
+              - {name: "option", label: "Enable Option", widget: "boolean", default: false, required: false}
+              - name: "option_list"
+                label: "Option List"
+                widget: "list"
+                required: false
+                if: "option"
+                fields:
+                  - {name: "text", label: "Text", widget: "string", required: false}
+                  - {name: "price", label: "Price", widget: "string", required: false}
+  - name: "menu"
+    label: "Menu Page"
+    files:
+      - file: "content/menu/menu.md"
+        label: "Menu Page Content"
+        name: "menu"
+        editor:
+          preview: false
+        fields:
+          - {name: "layout", label: "Layout", widget: "hidden", default: "menu.njk", required: false}
+          - {name: "title", label: "Title", widget: "string", required: false}
+          - {name: "description", label: "Description", widget: "string", required: false}
+          - {name: "image", label: "Image", widget: "image", required: false}
+          - {name: "show_breakfast", label: "Show Breakfast", widget: "boolean", required: false}
+          - {name: "permalink", label: "Permalink", widget: "string", required: false}
+          - {name: "body", label: "Content", widget: "markdown", required: false}
+  - name: "menus"
+    label: "Menus"
+    files:
+      - file: "_data/menus.yaml"
+        label: "Menu Data"
+        name: "menu_data"
+        editor:
+          preview: false
+        fields:
+          - {name: "title", label: "Title", widget: "string", required: false}
+          - {name: "description", label: "Description", widget: "string", required: false}
+          - name: "button"
+            label: "Button"
+            widget: "object"
+            required: false
+            fields:
+              - {name: "text", label: "Text", widget: "string", required: false}
+              - {name: "url", label: "URL", widget: "string", required: false}
+          - name: "list"
+            label: "Menu Sections"
+            widget: "list"
+            required: false
+            fields:
+              - {name: "title", label: "Section Title", widget: "string", required: false}
+              - {name: "description", label: "Section Description", widget: "string", required: false}
+              - {name: "enable_image", label: "Enable Section Image", widget: "boolean", default: false, required: false}
+              - {name: "image", label: "Section Image", widget: "image", required: false, if: "enable_image"}
+              - name: "item"
+                label: "Menu Items"
+                widget: "list"
+                required: false
+                fields:
+                  - {name: "name", label: "Item Name", widget: "string", required: false}
+                  - {name: "description", label: "Item Description", widget: "string", required: false}
+                  - {name: "price", label: "Item Price", widget: "string", required: false}
+                  - {name: "enable_option", label: "Enable Options", widget: "boolean", default: false, required: false}
+                  - name: "options"
+                    label: "Item Options"
+                    widget: "list"
+                    required: false
+                    if: "enable_option"
+                    fields:
+                      - {name: "name", label: "Option Name", widget: "string", required: false}
+                      - {name: "price", label: "Option Price", widget: "string", required: false}
+  - name: "pages"
+    label: "Static Pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "content/page/about.md"
+        editor:
+          preview: false
+        fields:
+          - {name: "title", label: "Title", widget: "string", required: false}
+          - {name: "description", label: "Description", widget: "string", required: false}
+          - {name: "image", label: "Image", widget: "image", required: false}
+          - {name: "permalink", label: "Permalink", widget: "string", required: false}
+          - {name: "body", label: "Body", widget: "markdown", required: false}
+  - name: "contact"
+    label: "Contact Page"
+    files:
+      - file: "content/contact.md"
+        label: "Contact Page Content"
+        name: "contact"
+        editor:
+          preview: false
+        fields:
+          - {name: "layout", label: "Layout", widget: "hidden", default: "contact.njk", required: false}
+          - {name: "title", label: "Title", widget: "string", required: false}
+          - {name: "description", label: "Description", widget: "string", required: false}
+          - {name: "image", label: "Image", widget: "image", required: false}
+          - {name: "form_title", label: "Form Title", widget: "string", required: false}
+          - {name: "button", label: "Button Text", widget: "string", required: false}
+          - name: "map"
+            label: "Map Section"
+            widget: "object"
+            required: false
+            fields:
+              - {name: "title", label: "Title", widget: "string", required: false}
+              - {name: "image", label: "Image", widget: "image", required: false}
+              - {name: "url", label: "URL", widget: "string", required: false}
+          - {name: "body", label: "Content", widget: "markdown", required: false}
+  - name: "404"
+    label: "404 Page"
+    files:
+      - file: "content/404.md"
+        label: "404 Page Content"
+        name: "404"
+        editor:
+          preview: false
+        fields:
+          - {name: "title", label: "Title", widget: "string", required: false}
+          - {name: "description", label: "Description", widget: "string", required: false}
+          - {name: "permalink", label: "Permalink", widget: "string", required: false}
+          - {name: "body", label: "Content", widget: "markdown", required: false}
+  - name: "settings"
+    label: "Global Settings"
+    files:
+      - file: "_data/metadata.yaml"
+        label: "Metadata"
+        name: "metadata"
+        editor:
+          preview: false
+        fields:
+          - {name: "title", label: "Title", widget: "string", required: false}
+          - {name: "description", label: "Description", widget: "string", required: false}
+          - {name: "language", label: "Language", widget: "string", required: false}
+          - {name: "locale", label: "Locale", widget: "string", required: false}
+          - {name: "image", label: "Image", widget: "image", required: false}
+          - {name: "favicon", label: "Favicon", widget: "image", required: false}
+          - {name: "url", label: "URL", widget: "string", required: false}
+          - {name: "formspree_id", label: "Formspree ID", widget: "string", required: false}
+          - name: "navbar"
+            label: "Navbar"
+            widget: "object"
+            required: false
+            fields:
+              - {name: "title", label: "Title", widget: "string", required: false}
+              - {name: "icon", label: "Icon", widget: "image", required: false}
+              - name: "list"
+                label: "Navigation Links"
+                widget: "list"
+                required: false
+                fields:
+                  - {name: "nav", label: "Navigation Text", widget: "string", required: false}
+                  - {name: "url", label: "URL", widget: "string", required: false}
+              - name: "button1"
+                label: "Button 1"
+                widget: "object"
+                required: false
+                fields:
+                  - {name: "text", label: "Text", widget: "string", required: false}
+                  - {name: "url", label: "URL", widget: "string", required: false}
+              - name: "button2"
+                label: "Button 2"
+                widget: "object"
+                required: false
+                fields:
+                  - {name: "text", label: "Text", widget: "string", required: false}
+                  - {name: "url", label: "URL", widget: "string", required: false}
+          - {name: "reservation_active", label: "Reservation Active", widget: "boolean", required: false}
+          - name: "reservation"
+            label: "Reservation Section"
+            widget: "object"
+            required: false
+            fields:
+              - {name: "title", label: "Title", widget: "string", required: false}
+              - {name: "section", label: "Section ID", widget: "string", required: false}
+              - {name: "image", label: "Image", widget: "image", required: false}
+              - {name: "text", label: "Text", widget: "string", required: false}
+              - {name: "button", label: "Button Text", widget: "string", required: false}
+              - name: "form"
+                label: "Form Fields"
+                widget: "object"
+                required: false
+                fields:
+                  - name: "name"
+                    label: "Name Field"
+                    widget: "object"
+                    required: false
+                    fields:
+                      - {name: "title", label: "Title", widget: "string", required: false}
+                      - {name: "icon", label: "Icon", widget: "string", required: false}
+                  - name: "phone"
+                    label: "Phone Field"
+                    widget: "object"
+                    required: false
+                    fields:
+                      - {name: "title", label: "Title", widget: "string", required: false}
+                      - {name: "icon", label: "Icon", widget: "string", required: false}
+                  - name: "email"
+                    label: "Email Field"
+                    widget: "object"
+                    required: false
+                    fields:
+                      - {name: "title", label: "Title", widget: "string", required: false}
+                      - {name: "icon", label: "Icon", widget: "string", required: false}
+                  - name: "date"
+                    label: "Date Field"
+                    widget: "object"
+                    required: false
+                    fields:
+                      - {name: "title", label: "Title", widget: "string", required: false}
+                      - {name: "icon", label: "Icon", widget: "string", required: false}
+                  - name: "notes"
+                    label: "Notes Field"
+                    widget: "object"
+                    required: false
+                    fields:
+                      - {name: "title", label: "Title", widget: "string", required: false}
+                      - {name: "icon", label: "Icon", widget: "string", required: false}
+          - name: "contact"
+            label: "Contact Section"
+            widget: "object"
+            required: false
+            fields:
+              - {name: "title", label: "Title", widget: "string", required: false}
+              - {name: "section", label: "Section ID", widget: "string", required: false}
+              - {name: "image", label: "Image", widget: "image", required: false}
+              - {name: "map_url", label: "Map URL", widget: "string", required: false}
+              - {name: "restaurant_name", label: "Restaurant Name", widget: "string", required: false}
+              - name: "address"
+                label: "Address Field"
+                widget: "object"
+                required: false
+                fields:
+                  - {name: "title", label: "Title", widget: "string", required: false}
+                  - {name: "icon", label: "Icon", widget: "string", required: false}
+                  - {name: "text", label: "Text", widget: "string", required: false}
+              - name: "email"
+                label: "Email Field"
+                widget: "object"
+                required: false
+                fields:
+                  - {name: "title", label: "Title", widget: "string", required: false}
+                  - {name: "icon", label: "Icon", widget: "string", required: false}
+                  - {name: "text", label: "Text", widget: "string", required: false}
+              - name: "phone"
+                label: "Phone Field"
+                widget: "object"
+                required: false
+                fields:
+                  - {name: "title", label: "Title", widget: "string", required: false}
+                  - {name: "icon", label: "Icon", widget: "string", required: false}
+                  - {name: "text", label: "Text", widget: "string", required: false}
+                  - {name: "url", label: "URL", widget: "string", required: false}
+              - name: "hours"
+                label: "Opening Hours"
+                widget: "object"
+                required: false
+                fields:
+                  - {name: "show", label: "Show Hours", widget: "boolean", required: false}
+                  - {name: "title", label: "Title", widget: "string", required: false}
+                  - {name: "icon", label: "Icon", widget: "string", required: false}
+                  - name: "text"
+                    label: "Hours List"
+                    widget: "list"
+                    required: false
+                    fields:
+                      - {name: "day", label: "Day", widget: "string", required: false}
+                      - {name: "info", label: "Info", widget: "string", required: false}
+          - name: "social"
+            label: "Social Links"
+            widget: "object"
+            required: false
+            fields:
+              - name: "list"
+                label: "Social Links List"
+                widget: "list"
+                required: false
+                fields:
+                  - {name: "title", label: "Title", widget: "string", required: false}
+                  - {name: "icon", label: "Icon", widget: "string", required: false}
+                  - {name: "url", label: "URL", widget: "string", required: false}
+          - name: "footer"
+            label: "Footer"
+            widget: "object"
+            required: false
+            fields:
+              - {name: "title", label: "Title", widget: "string", required: false}
+              - {name: "icon", label: "Icon", widget: "image", required: false}
+              - name: "nav"
+                label: "Footer Navigation"
+                widget: "list"
+                required: false
+                fields:
+                  - {name: "nav", label: "Navigation Text", widget: "string", required: false}
+                  - {name: "url", label: "URL", widget: "string", required: false}
+          - {name: "copyrights", label: "Copyrights", widget: "string", required: false}
+          - name: "developer"
+            label: "Developer Info"
+            widget: "object"
+            required: false
+            fields:
+              - {name: "text", label: "Text", widget: "string", required: false}
+              - {name: "name", label: "Name", widget: "string", required: false}
+              - {name: "url", label: "URL", widget: "string", required: false}
+          - name: "metasocial"
+            label: "Meta Social"
+            widget: "object"
+            required: false
+            fields:
+              - {name: "facebook", label: "Facebook URL", widget: "string", required: false}
+              - {name: "twitter", label: "Twitter URL", widget: "string", required: false}
+              - {name: "tweet", label: "Tweet Text", widget: "string", required: false}
+          - name: "author"
+            label: "Author Info"
+            widget: "object"
+            required: false
+            fields:
+              - {name: "name", label: "Name", widget: "string", required: false}
+              - {name: "email", label: "Email", widget: "string", required: false}
+              - {name: "url", label: "URL", widget: "string", required: false}

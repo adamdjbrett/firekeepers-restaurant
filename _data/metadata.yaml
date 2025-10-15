@@ -1,0 +1,127 @@
+title: "Firekeepers"
+description: "Firekeepers's Restaurant"
+language: en
+locale: en_US
+image: /img/logo.svg
+favicon: /img/logo.svg
+url: http://localhost:8080
+formspree_id: "https://formspree.io/f/{your_form_id}"
+
+navbar:
+  title: Firekeepers
+  icon: /img/logo.svg
+  list:
+    - nav: Home
+      url: "/"
+    - nav: About
+      url: "/about/"
+    - nav: Breakfast
+      url: "/breakfast/"
+    - nav: Menu
+      url: "/menu/"
+    - nav: Contact
+      url: "/contact/"
+  button1:
+    text: Reservation
+    url: "#reservation"
+  button2:
+    text: Contact
+    url: "#contact"
+
+reservation_active: true
+reservation:
+  title: "Reservation"
+  section: reservation"
+  image: "/img/reservation.avif"
+  text: "Enjoy delicious dishes at our restaurant. Book now for an unforgettable experience."
+  button: "Book Now"
+  form:
+    name:
+      title: Name
+      icon: fas fa-user
+    phone:
+      title: Phone Number
+      icon: fas fa-phone
+    email:
+      title: Email
+      icon: fas fa-envelope
+    date:
+      title: Date
+      icon: fas fa-calendar
+    notes:
+      title: Notes
+      icon: fas fa-pencil
+
+contact:
+  title: "Contact Us."
+  section: "contact"
+  image: "/img/maps.png"
+  map_url: "https://maps.app.goo.gl/uyfwycgCYriNeQ1j8"
+  restaurant_name: "Firekeepers Restaurant"
+  address:
+    title: "Address"
+    icon: "fas fa-map-marked-alt"
+    text: "3879 Interstate 81, Frontage Rd, Nedrow, NY 13120, United States"
+  email:
+    title: "Email"
+    icon: "fas fa-envelope"
+    text: "hello@yourdomain.com"
+  phone:
+    title: "Phone"
+    icon: "fas fa-mobile-alt"
+    text: "+1 (315) 469-8159"
+    url: "tel:+13154698159"
+  hours:
+    show: true
+    title: "Opening Hours"
+    icon: "far fa-clock"
+    text: 
+      - day: "Monday"
+        info: "CLOSED"
+      - day: "Tuesday - Friday"
+        info: "7am - 7pm"
+      - day: "Saturday - Sunday"
+        info: "7am - 2pm"
+
+social:
+  title: Social
+  list:
+    - title: Facebook
+      icon: fab fa-facebook
+      url: https://facebook.com/your_facebook_page
+    - title: Twitter
+      icon: fab fa-twitter
+      url: https://twitter.com/your_twitter
+    - title: Instagram
+      icon: fab fa-instagram
+      url: https://instagram.com/your_instagram
+
+footer:
+  title: "Firekeepers"
+  icon: /img/logo.svg
+  nav:
+    - nav: Home
+      url: "/"
+    - nav: About
+      url: "/about"
+    - nav: Menu
+      url: "/menu"
+    - nav: Contact
+      url: "/contact"
+
+copyrights: Copyright © Firekeepers 2025
+
+developer:
+  text: managed by
+  name: adamdjbrett
+  url: https://adamdjbrett.com
+
+metasocial:
+  facebook: https://www.facebook.com/your_facebook_page
+  twitter: https://twitter.com/your_twitter
+  tweet: "@your_twitter"
+
+author:
+  name: Adam Dj Brett
+  email: info@adamdjbrett.com
+  url: https://www.adamdjbrett.com

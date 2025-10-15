@@ -1,0 +1,33 @@
+<nav class="desktop grape bbt">
+  <div class="container-fluid">
+  <div class="row p-3">  
+  <div class="col-md-3">
+    <a href="{{metadata.url}}">
+	<img class="img-fluid" alt="{{metadata.title}}" width="100" height="60" src="{{metadata.navbar.icon}}"/>
+	</a>
+	</div>	
+<div class="col-md-6 nav p-3 justify-content-center">{% for n in metadata.navbar.list %}
+  <a class="nav-link" aria-current="page" href="{{n.url}}">{{n.nav}}</a>{% endfor %}
+</div>  
+  <div class="col-md-3 p-3 text-end">
+   <a href="{{metadata.navbar.button1.url}}" class="btn btn-outline-ungu">{{metadata.navbar.button1.text}}</a>
+	  <a href="{{metadata.navbar.button2.url}}" class="text-end btn btn-ungu ms-1">{{metadata.navbar.button2.text}}</a>
+  </div>
+  </div>
+  </div>
+</nav>
+<nav class="navbar navbar-expand-lg mobile grape bbt p-2">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{metadata.url}}"><img class="img-fluid" width="100" height="60" alt="{{metadata.title}}" src="{{metadata.navbar.icon}}"/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i> Menu
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">{% for n in metadata.navbar.list %}
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{n.url}}">{{n.nav}}</a>
+        </li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav> 

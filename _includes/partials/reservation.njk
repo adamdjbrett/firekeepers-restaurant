@@ -1,0 +1,47 @@
+{% if metadata.reservation_active %}<div class="container-fluid grape" id="{{metadata.reservation.section}}">
+<div class="row mt-5 mb-5 ">
+<div class="col-md-10 mx-auto p-3 p-md-5">
+<div class="row">
+<div class="col-md-6 p-3 p-md-5 rounded"
+ style="
+        background-image: url('{{metadata.reservation.image}}');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        min-height: 200px;
+     ">
+</div>
+<div class="col-md-1"></div>
+<div class="col-md-5 p-3 p-md-5">
+<h2 class="sh-text"><strong><a href="{{metadata.url}}" class="none">
+{{metadata.reservation.title}}
+</a></strong></h2>
+<p>{{metadata.reservation.text| markdownify |safe}}</p>
+<form action="{{metadata.formspree_id}}" method="post">
+<div class="mt-3 mb-3">
+  <label for="name"><i class="{{metadata.reservation.form.name.icon}} me-2"></i>{{metadata.reservation.form.name.title}}</label>
+  <input name="Name" class="form-control" id="name" type="text">
+  </div>
+<div class="mt-3 mb-3">
+  <label for="phone" ><i class="{{metadata.reservation.form.phone.icon}} me-2"></i>{{metadata.reservation.form.phone.title}}</label>
+  <input name="Phone" class="form-control" id="phone" type="string">
+  </div>
+<div class="mt-3 mb-3">
+  <label for="email" ><i class="{{metadata.reservation.form.email.icon}} me-2"></i>{{metadata.reservation.form.email.title}}</label>
+  <input name="Email" class="form-control" id="email" type="email">
+  </div>
+<div class="mt-3 mb-3">
+  <label for="date" ><i class="{{metadata.reservation.form.date.icon}} me-2"></i>{{metadata.reservation.form.date.title}}</label>
+  <input name="Date" class="form-control" id="date" type="datetime-local">
+  </div>
+<div class="mt-3 mb-3">
+  <label for="note" ><i class="{{metadata.reservation.form.notes.icon}} me-2"></i>{{metadata.reservation.form.notes.title}}</label>
+  <textarea name="note" rows="3"  class="form-control" id="note"></textarea>
+  </div>
+  <button type="submit" class="btn btn-dark btn-lg">{{metadata.reservation.button}}</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>{% endif %}

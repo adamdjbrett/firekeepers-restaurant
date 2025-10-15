@@ -1,0 +1,232 @@
+title: Breakfast
+description: Firekeepers Breakfast Menu
+button: 
+ text: Explore All BreakFast Menu
+ url: /breakfast/
+menu: 
+ - title: "Big Breakfast"
+   single_price: true
+   price: "$10.50"
+   image: "/img/breakfast.avif"
+   description: |
+     Choice of 2 pancakes OR French Toast with 2 eggs any style & choice of bacon, ham, or sausage. Served with home friest and toast.
+   list_active: false
+   option: false
+ - title: "Meat Lovers Skillet"
+   single_price: true
+   price: "$9.95"
+   image: "/img/breakfast.avif"
+   description: "Bacon , ham, and sausage scrambied togehter with 3 eggs and home fries,then topped with cheddar cheese. Served with toast"
+   list_active: false
+   option: false
+ - title: "Veggie Skillet"
+   single_price: true
+   price: "$9.75"
+   image: "/img/breakfast.avif"
+   description: "Onionis, peppers, mushrooms , and broccoli, scrambled together with 3 eggs and home fries, then topped with cheddar cheese. Served with toast."
+   list_active: false
+   option: false
+ - title: "Steak and Eggs"
+   single_price: true
+   price: "$12.95"
+   image: 
+   description: "Strip steak with 2 eggs any style, home fries with toast"
+   list_active: false
+   option: false
+ - title: "Frittata"
+   single_price: true
+   price: "$9.75"
+   image: "/img/breakfast.avif"
+   description: "Scrambled eggs, sausage, peppers , onions, mushrooms, broccoli,pepperoni , and home fries. Served with toast."
+   list_active: false
+   option: false
+ - title: "Two Eggs"
+   single_price: false
+   price: 
+   image: "/img/breakfast.avif"
+   description: 
+   list_active: true
+   list: 
+     - text: "Any single served with home fries and toast"
+       price: "$5.95"
+   option: true
+   option_list: 
+     - text: "Add Bacon, sausage, or ham"
+       price: "$7.95"
+ - title: "Breakfast Sandwich"
+   single_price: true
+   price: "$5.95"
+   image: "/img/breakfast.avif"
+   description: "One egg with coice of ham, bacon, OR sausage and choice of cheese on a hard roll with home fries"
+   list_active: false
+   option: true
+   option_list: 
+     - text: "On a bagel OR english muffin"
+       price: "Add 75¢"
+ - title: "Country Style Scrambler"
+   single_price: true
+   price: "$7.25"
+   image: "/img/breakfast.avif"
+   description: "Scrambled eggs over biscuits topped with beef OR sausage gravy and home fries."
+   list_active: false
+   option: false
+ - title: "Hash and Eggs"
+   single_price: true
+   price: "$8.75"
+   image: "/img/breakfast.avif"
+   description: "Scrambled eggs,chesse and 3 toppings, any additional toppings"
+   list_active: false
+   option: false
+ - title: "Breakfast Pizza"
+   single_price: false
+   price: 
+   image: "/img/breakfast.avif"
+   description: "Scrambled eggs,chesse and 3 toppings, any additional toppings"
+   list_active: true
+   list: 
+     - text: 'Size: 8"'
+       price: "$8.50"
+     - text: 'Size: 12"'
+       price: "$9.95"
+   option: true
+   option_list: 
+     - text: "Per toppings"
+       price: "Add $1"
+ - title: "Pancakes"
+   single_price: false
+   price: 
+   image: "/img/breakfast.avif"
+   description: 
+   list_active: true
+   list: 
+     - text: "1 Pancake"
+       price: "$2.50"
+     - text: "Short Stack (2)"
+       price: "$3.75"
+     - text: "Tall Stack (3)"
+       price: "$4.95"
+   option: true
+   option_list: 
+     - text: "Add Blueberries or Strawberies"
+       price: "$1.50"
+ - title: "French Toast"
+   single_price: false
+   price: 
+   image: "/img/breakfast.avif"
+   description: 
+   list_active: true
+   list: 
+     - text: "1 French Toast"
+       price: "$2.50"
+     - text: "Short Stack (2)"
+       price: "$3.95"
+     - text: "Tall Stack (3)"
+       price: "$4.95"
+   option: true
+   option_list: 
+     - text: "Add Blueberries or Strawberies"
+       price: "$1.50"
+ - title: "For The Kiddies"
+   single_price: false
+   price: 
+   image: "/img/breakfast.avif"
+   description: 
+   list_active: true
+   list: 
+     - text: "1 Egg and Toast"
+       price: "$4.75"
+     - text: "French Toast"
+       price: "$4.75"
+     - text: "Pancakes"
+       price: "$4.75"
+   option: false
+ - title: "Omelettes"
+   single_price: false
+   price: 
+   image: "/img/breakfast.avif"
+   description: Served with home fries and toast
+   list_active: true
+   list: 
+     - text: "Cheese"
+       price: "$7.25"
+     - text: "Veggie"
+       price: "$9.25"
+     - text: "Western"
+       price: "$9.75"
+     - text: "Ham & Cheese"
+       price: "$9.95"
+     - text: "Meat (Bacon, Ham & Sausage)"
+       price: "$9.95"
+     - text: "Add Cheese"
+       price:  
+       variant: 
+          - name: "American , Swiss , Cheddar, Provolone , OR Mozzarella"
+            price: "95¢"
+     - text: "Add Veggies"
+       price:  
+       variant: 
+          - name: "Broccoli, Onions, Peppers, Mushrooms, Spinach, OR Tomatoes "
+            price: "95¢"
+     - text: "Add Meats"
+       price:  
+       variant: 
+          - name: "Bacon, Sausage, Ham, Hash, OR Pepperoni"
+            price: "95¢"
+   option: true
+   option_list: 
+     - text: "Substitute Egg Whites"
+       price: "$1.25"
+ - title: "Breakfast Sides"
+   single_price: false
+   price: 
+   image: "/img/breakfast.avif"
+   description: 
+   list_active: true
+   list: 
+     - text: "One Egg"
+       price: "$1.50"
+     - text: "Oatmeal"
+       price:  
+       variant: 
+          - name: Cup
+            price: "$1.95"
+          - name: Bowl
+            price: "$2.75"
+     - text: "Fresh Fruit"
+       price:  
+       variant: 
+          - name: Cup
+            price: "$2.95"
+          - name: Bowl
+            price: "$4.50"
+     - text: "Bacon, Sausage, Ham Steak"
+       price: "$4.75"
+     - text: "Corned Beef Hash"
+       price: "$4.75"
+     - text: "Bagel"
+       price:  
+       variant: 
+          - name: Standard
+            price: "$2.50"
+          - name: with Cream Cheese
+            price: "$2.95"
+     - text: "Toast"
+       price: "$1.95"
+     - text: "English Muffin"
+       price: "$1.95"
+     - text: "Raisin Toast"
+       price: "$1.95"
+     - text: "Grilled Hard Roll"
+       price: "$1.95"
+     - text: "2 Biscuits"
+       price: "$2.50"
+     - text: "Home Fries"
+       price:  
+       variant: 
+          - name: Standard
+            price: "$2.50"
+          - name: with onions
+            price: "$2.95"
+     - text: "Cup of Gravy"
+       price: "$1.95"
+   option: false

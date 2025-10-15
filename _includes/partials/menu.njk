@@ -1,0 +1,122 @@
+{% if show_menu %}<div class="container-fluid">
+<div class="row">
+<div class="col-md-10 mx-auto p-3 p-md-5">
+  <h2 class="sh-text">
+  <strong>
+    <a href="" class="none"> {{menus.title}} </a>
+  </strong>
+</h2>
+<p>{{menus.description}}</p>
+<ul class="nav nav-pills mb-5 mt-5" id="pills-tab" role="tablist">
+  {% for m in menus.list %}
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link menusi {% if loop.first %}active{% endif %}"
+      id="pills-{{ loop.index }}-tab"
+      data-bs-toggle="pill"
+      data-bs-target="#pills-{{ loop.index }}"
+      type="button"
+      role="tab"
+      aria-controls="pills-{{ loop.index }}"
+      aria-selected="{% if loop.first %}true{% else %}false{% endif %}"
+    >
+      {{ m.title }}
+    </button>
+  </li>
+  {% endfor %}
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  {% for m in menus.list %}
+  <div
+    class="tab-pane fade {% if loop.first %}show active{% endif %} rounded"
+    id="pills-{{ loop.index }}"
+    role="tabpanel"
+    aria-labelledby="pills-{{ loop.index }}-tab"
+    tabindex="0"
+  >
+    <div class="row">
+
+  <div class="col-md-6 p-3 p-md-5 rounded"
+  style="
+        background-image: url('{{m.image or metadata.image}}');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+     ">
+      </div>
+      <div class="col-md-6 p-3 p-md-5">
+        <h3 class="mt-5">
+          <span class="bg-ungu text-white mt-3 mb-3 p-3">
+            <strong>{{ m.title }}</strong>
+          </span>
+        </h3>
+        <hr />
+        {% for item in m.item %}
+        <p>
+          {{ item.name }}
+          <span class="float-end">{{ item.price }}</span>
+        </p>
+        {% if item.description %}
+        <p>
+          <em>{{ item.description }}</em>
+        </p>
+        {% endif %}
+        {% if item.option and item.options %}
+        {% for option in item.options %}
+        <p class="ms-5">
+          <small>
+            {{ option.name }}
+            <span class="float-end">{{ option.price }}</span>
+          </small>
+        </p>
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="row menus">
+  {% for m in menus.list %}
+  <div class="col-md-5 col-12 p-3">
+    <h3 class="mt-5">
+      <span class="bg-ungu text-white mt-3 mb-3 p-3">
+        <strong>{{ m.title }}</strong>
+      </span>
+    </h3>
+    <hr />
+    {% for item in m.item %}
+    <p>
+      {{ item.name }}
+      <span class="float-end">{{ item.price }}</span>
+    </p>
+    {% if item.description %}
+    <p>
+      <em>{{ item.description }}</em>
+    </p>
+    {% endif %}
+    {% if item.option and item.options %}
+    {% for option in item.options %}
+    <p class="ms-5">
+      <small>
+        {{ option.name }}
+        <span class="float-end">{{ option.price }}</span>
+      </small>
+    </p>
+    {% endfor %}
+    {% endif %}
+    {% endfor %}
+  </div>
+  {% if loop.index % 2 != 0 %}
+  <div class="col-md-2 p-3"></div>
+  {% endif %}
+  {% endfor %}
+
+</div>
+
+
+</div>
+</div>
+</div>{% endif %}

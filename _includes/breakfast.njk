@@ -1,0 +1,83 @@
+---
+layout: base.njk
+---
+<header class="container-fluid align-items-center justify-content-center">
+    <div class="row">
+        <div class="col-md-10 mx-auto text-center p-5">
+            <h1 class="h-text text-uppercase p-3"><strong>
+			<a href="{{page.url}}" class="none">{{title}}</a></strong></h1>
+            <h2 class="mb-5">{{description}}</h2>
+			</div>
+            <img class="img-fluid col-md-11 mx-auto rounded mb-5 header-cover" alt="{{title}}" src="{{image or metadata.image}}"/>
+    <div class="col-md-8 mx-auto p-3">{{content|safe}}</div>
+          </div>
+</header>
+<div class="container-fluid" id="breakfast">
+  <div class="row">
+    <div class="col-md-10 mx-auto p-3 p-md-5">
+      <div class="row p-3">
+        {% for b in breakfast.menu %}
+        <div class="col-md-4 col-6 p-3">
+          <div class="row">
+            <div
+              class="col-md-12 p-3 p-md-5 rounded"
+              style="
+                background-image: url('{{b.image or metadata.image }}');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+              "
+            ></div>
+            <div class="col-md-12 p-3">
+              <h3 class="row mb-3 small">
+                <span class="col-md-8">{{b.title}}</span>
+                {% if b.single_price %}
+                <span class="col-md-4 text-end">{{ b.price }}</span>
+                {% endif %}
+              </h3>
+              {% if b.description %}
+              <p>{{b.description}}</p>
+              {% endif %}
+
+              {% if b.list_active and b.list %}
+                {% for item in b.list %}
+                  <p class="row smalls">
+                    <span class="col-md-8">{{ item.text }}</span>
+                    <span class="col-md-4 text-end">
+                      <strong>
+                        {% if item.price %}
+                          {{ item.price }}
+                        {% endif %}
+                      </strong>
+                    </span>
+                  </p>
+
+                  {# Handle variants #}
+                  {% if item.variant %}
+                    {% for variant in item.variant %}
+                      <p class="row smalls ms-2">
+                        <span class="col-md-8"><i>{{ variant.name }}</i></span>
+                        <span class="col-md-4 text-end"><i>{{ variant.price }}</i></span>
+                      </p>
+                    {% endfor %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+
+              {% if b.option and b.option_list %}
+                {% for option in b.option_list %}
+                  <p class="row smalls ms-2">
+                    <span class="col-md-8"><strong><i>{{ option.text }}</i></strong></span>
+                    <span class="col-md-4 text-end"><strong><i>{{ option.price }}</i></strong></span>
+                  </p>
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% include "partials/menu.njk" %}
