@@ -1,6 +1,6 @@
 # FIREKEEPERS RESTAURANT
 
-Built with JAMSTACK 11ty develope by Adam Dj Brett
+Built with JAMSTACK 11ty developed by Adam Dj Brett
 
 ---
 
