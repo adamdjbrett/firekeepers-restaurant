@@ -76,25 +76,29 @@ contact:
     title: "Opening Hours"
     icon: "far fa-clock"
     text: 
-      - day: "Monday"
-        info: "CLOSED"
-      - day: "Tuesday - Friday"
+      - day: "Monday - Wednesday"
+        info: "7am-2pm"
+      - day: "Thursday & Friday"
         info: "7am - 7pm"
       - day: "Saturday - Sunday"
         info: "7am - 2pm"
+
+
+
+        
 
 social:
   title: Social
   list:
     - title: Facebook
       icon: fab fa-facebook
-      url: https://facebook.com/your_facebook_page
-    - title: Twitter
-      icon: fab fa-twitter
-      url: https://twitter.com/your_twitter
-    - title: Instagram
-      icon: fab fa-instagram
-      url: https://instagram.com/your_instagram
+      url: https://www.facebook.com/groups/140148846660398
+    #- title: Twitter
+    #  icon: fab fa-twitter
+    #  url: https://twitter.com/your_twitter
+    #- title: Instagram
+    #  icon: fab fa-instagram
+    #  url: https://instagram.com/your_instagram
 
 footer:
   title: "Firekeepers"

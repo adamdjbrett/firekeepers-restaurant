@@ -12,5 +12,5 @@ map:
 ---
 ### Contact Us
 
-Lorep ipsum dolor siamet amet jabang bayi lanang wedok sekali merdeka tetap merdeka. Lorep ipsum dolor siamet amet jabang bayi lanang wedok sekali merdeka tetap merdeka.
+Firekeepers staff and management take great pride in serving you, and we are always happy to hear from you! Do you have questions about the menu, special arrangements, or table availability? Be sure to reach out to us with any questions or comments, and visit us on our social media as well!
 

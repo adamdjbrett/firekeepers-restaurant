@@ -50,3 +50,34 @@ Need help or have project want work with me ??
 Contact Me
 + https://adamdjbrett.com
 + info@adamdjbrett.com
+
+## CHANGELOG
+
+-20260114cc
+-metadata.yaml : hours updated, added facebook url, commented out twitter and instagram
+
+-20260115cc
+-working on lorem ispum blurbs
+-blurbs found : 7 total
+-researched similar sites for study   
+-home : index.md : header, welcome, about (short intro), all blurbs updated
+-about : about.md : informative about blurb updated
+-recieved updated menus heic files
+-recieved git instructions
+-menu : menu.md blurb updated
+-breakfast : breakfast.md blurb updated
+-contact : contact.md blurb updated
+
+-20260116
+-breakfast.yaml : menu updated
+-breakfast.yaml : item 'for the kiddies' does not exist in new menu : commented out
+-BUG NOTICE: firekeepers.info breaks structure!! does not populate with information from other pages, then sublinks under itself and not the main structure, many of the page section headings link to it! 
+-menus.yaml : menu prices and additional text updated
+-seo.njk : added <!-- JSON-LD Schema SEO --> structured data
+
+
+
+
+
+
+

@@ -44,3 +44,32 @@
 <meta property="og:locale" content="{{ metadata.locale }}" />
 <meta name="generator" content="{{ eleventy.generator }}" />
 <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+
+<!-- JSON-LD Schema SEO -->
+
+<script type='application/ld+json'>
+{
+  "@context": "http://www.schema.org",
+  "@type": "Restaurant",
+  "name": "Firekeepers",
+  "url": "https://firekeepers.info/",
+  "priceRange": "$",
+  "description": "Local restaurant, proudly owned by Onondaga Nation, serving and supporting its community! Est. 1983. ",
+  "address": {
+     "@type": "PostalAddress",
+     "streetAddress": " 3879 Interstate 81, Frontage Rd",
+     "addressLocality": "Nedrow",
+     "addressRegion": "NY",
+     "postalCode": "13120",
+     "addressCountry": "United States"
+  },
+  "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": "42.96187021153326",
+     "longitude": "-76.13157918553699"
+  },
+  "hasMap": "https://maps.app.goo.gl/BRUGgjxQhxcXHxtn7",
+   "openingHours": "Mo 07:00-14:00 Tu 07:00-14:00 We 07:00-14:00 Th 07:00-19:00 Fr 07:00-19:00 Sa 07:00-14:00 Su 07:00-14:00",
+  "telephone": " +1 (315) 469-8159"
+}
+</script>
