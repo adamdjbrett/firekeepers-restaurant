@@ -51,7 +51,11 @@ Contact Me
 + https://adamdjbrett.com
 + info@adamdjbrett.com
 
-## CHANGELOG
+## CHANGELOG 
+1. add instagram https://instagram.com/firekeepersrestaruant
+2. add links to google maps
+3. disable reservations
+
 
 -20260114cc
 -metadata.yaml : hours updated, added facebook url, commented out twitter and instagram
