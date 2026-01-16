@@ -72,13 +72,20 @@ Contact Me
 -breakfast : breakfast.md blurb updated
 -contact : contact.md blurb updated
 
--20260116
+-20260116cc
 -breakfast.yaml : menu updated
 -breakfast.yaml : item 'for the kiddies' does not exist in new menu : commented out
 -BUG NOTICE: firekeepers.info breaks structure!! does not populate with information from other pages, then sublinks under itself and not the main structure, many of the page section headings link to it! 
 -menus.yaml : menu prices and additional text updated
 -seo.njk : added <!-- JSON-LD Schema SEO --> structured data
 
+-20260116cc
+-fulfilling requested changes
+- add instagram https://instagram.com/firekeepersrestaruant done
+- error, instagram account not functional
+- using likely instagram link https://www.instagram.com/firekeepersrestaurant/
+- add links to google maps done
+- disable reservations done
 
 
 

@@ -28,7 +28,7 @@ navbar:
     text: Contact
     url: "#contact"
 
-reservation_active: true
+reservation_active: false
 reservation:
   title: "Reservation"
   section: reservation"
@@ -96,9 +96,12 @@ social:
     #- title: Twitter
     #  icon: fab fa-twitter
     #  url: https://twitter.com/your_twitter
-    #- title: Instagram
-    #  icon: fab fa-instagram
-    #  url: https://instagram.com/your_instagram
+    - title: Instagram
+      icon: fab fa-instagram
+      url: https://www.instagram.com/firekeepersrestaurant/
+    - title: Google Maps
+      icon: 
+      url: "https://www.google.com/maps/place/Firekeepers/@42.9581118,-76.1389238,17z/data=!3m1!4b1!4m6!3m5!1s0x89d9f59be19f1103:0xaab7cff1edb97ec7!8m2!3d42.9581118!4d-76.1389238!16s%2Fg%2F1tp900t1?entry=tts&g_ep=EgoyMDI1MTAxMi4wIPu8ASoASAFQAw%3D%3D&skid=f4bd72f7-76e7-4395-aff2-e8fb667769b2"
 
 footer:
   title: "Firekeepers"
