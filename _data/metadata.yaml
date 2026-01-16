@@ -21,9 +21,9 @@ navbar:
       url: "/menu/"
     - nav: Contact
       url: "/contact/"
-  button1:
-    text: Reservation
-    url: "#reservation"
+  #button1:
+  #  text: Reservation
+  #  url: "#reservation"
   button2:
     text: Contact
     url: "#contact"

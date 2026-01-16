@@ -11,9 +11,9 @@ header:
  button1: 
    text: "Explore Menu"
    url: "#menu"
- button2: 
-   text: "Reservation"
-   url: "#reservation"
+ #button2: 
+ #  text: "Reservation"
+ #  url: "#reservation"
 
 welcome: 
  title: Welcome
