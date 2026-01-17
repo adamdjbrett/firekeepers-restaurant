@@ -10,7 +10,7 @@
   <a class="nav-link" aria-current="page" href="{{n.url}}">{{n.nav}}</a>{% endfor %}
 </div>  
   <div class="col-md-3 p-3 text-end">
-   <a href="{{metadata.navbar.button1.url}}" class="btn btn-outline-ungu">{{metadata.navbar.button1.text}}</a>
+   {% if metadata.reservation_active %}<a href="{{metadata.navbar.button1.url}}" class="btn btn-outline-ungu">{{metadata.navbar.button1.text}}</a>{% endif %}
 	  <a href="{{metadata.navbar.button2.url}}" class="text-end btn btn-ungu ms-1">{{metadata.navbar.button2.text}}</a>
   </div>
   </div>

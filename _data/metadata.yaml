@@ -28,7 +28,7 @@ navbar:
     text: Contact
     url: "#contact"
 
-reservation_active: true
+reservation_active: false  # Set to true to re-enable reservations
 reservation:
   title: "Reservation"
   section: reservation"
